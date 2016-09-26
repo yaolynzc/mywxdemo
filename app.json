@@ -1,12 +1,30 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/bind/bind"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "微信小程序Demo示例",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color":"#0f0",
+    "selectedColor":"#00f",
+    "backgroundColor":"#f00",
+    "list":[{
+      "pagePath":"page/index/index",
+      "text":"首页",
+      "iconPath":"image/wechat.png",
+      "selectedIconPath":"image/wechatHL.png"
+    },{
+      "pagePath":"page/binde/bind",
+      "text":"绑定",
+      "iconPath":"image/wechat.png",
+      "selectedIconPath":"image/wechatHL.png"
+    }]
+  },
+  "debug":true
 }

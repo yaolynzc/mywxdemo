@@ -1,0 +1,48 @@
+<!-- This is our View -->
+<view>Hello {{ name }}!</view>
+<button type="primary" bindtap="changeName">Click me!</button>
+
+<!-- 数据绑定 -->
+<text id="item-{{ id }}">{{ message }}</text>
+
+<!-- 列表渲染 -->
+<view wx:for="{{ array }}">{{ item }}</view>
+
+<!-- 条件渲染 -->
+<view wx:if="{{ view == 'WEBVIEW' }}">WEBVIEW</view>
+<view wx:elif="{{ view == 'APP' }}">APP</view>
+<view wx:else="{{ view == 'MINA' }}">MINA</view>
+
+<!-- 模板 -->
+<template name="staffName">
+    <view>
+        FirstName:{{ firstName }},LastName:{{ lastName }}
+    </view>
+</template>
+<template is="staffName" data="...staffA"></template>
+<template is="staffName" data="...staffB"></template>
+<template is="staffName" data="...staffC"></template>
+
+<!-- 事件 -->
+<view bindtap="add">{{ count }}</view>
+
+<!-- 三元运算 -->
+<view hidden="{{ flag?true:false }}">Hidden</view>
+
+<!-- 算数运算 -->
+<view>{{ a+b }} + {{ c }} + d </view>
+
+<!-- 逻辑判断 -->
+<view wx:if="{{ length > 5 }}">逻辑判断</view>
+
+<!-- 字符串运算 -->
+<view>{{ "hello " + name }}</view>
+
+<!-- 组合-数组 -->
+<view wx:for="{{ [zero,1,2,3,4] }}">{{ item }}</view>
+
+<!-- 组合-对象 -->
+<template is="objectCombine" data="{{ for:a,bar:b }}"></template>
+
+<!-- 展运算符 ... 来将一个对象展开 -->
+<!--<template is="objectCombine" data="{{..obj1,...obj2,e:5 }}"></template>-->
