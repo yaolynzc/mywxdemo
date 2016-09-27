@@ -23,6 +23,11 @@ var helloData = {
     obj2:{
         c:3,
         d:4
+    },
+    item:{
+        index:0,
+        msg:'this is a template',
+        time:'2016-09-15'
     }
 }
 

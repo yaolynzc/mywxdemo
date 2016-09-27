@@ -4,12 +4,18 @@ var app = getApp()
 Page({
   data: {
     motto: 'Hello World',
-    userInfo: {}
+    userInfo: {},
+    eImage:'../image/wechatHL.png'
   },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../bind/bind'
+      url: '../view/view'
+    })
+  },
+  bindEventTap:function(){
+    wx.navigateTo({
+      url:'../event/event'
     })
   },
   onLoad: function () {

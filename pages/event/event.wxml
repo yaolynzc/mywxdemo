@@ -1,0 +1,16 @@
+<!-- 事件的使用方式 -->
+<button id="tapTest" data-hi="MINA" bindtap="tapName" type="primary" >click me!</button>
+
+<!-- 事件绑定 -->
+<view id="outter" bindtap="handleTap1">
+    outer view
+    <view id="middle" catchtap="handleTap2">
+        middle view
+        <view id="inner" bindtap="handleTap3">
+            inner view
+        </view>
+    </view>
+</view>
+
+<!-- 组件中可以定义数据 -->
+<view data-alpha-beta="1" data-alphaBeta="2" bindtap="bindAlphaTap">DataSet Test</view>

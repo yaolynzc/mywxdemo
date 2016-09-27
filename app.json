@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/bind/bind"
+    "pages/bind/bind",
+    "pages/event/event"
   ],
   "window":{
     "backgroundTextStyle":"light",
