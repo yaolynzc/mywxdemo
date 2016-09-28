@@ -1,8 +1,48 @@
 <!-- 一个块级区域 -->
-<view style="display:flex;background:pink;height:200px;">block</view>
+<!--<view style="display:flex;background:pink;height:200px;">block</view>-->
 
 <!-- 一个行级区域 -->
-<view style="display:inline-block;background:red;">inline</view>
+<!--<view style="display:inline-block;background:red;">inline</view>-->
 
 <!-- 一个行级区域 -->
-<view style="display:inline-block;backgroud:blue;">inline2</view>
+<!--<view style="display:inline-block;backgroud:blue;">inline2</view>-->
+
+<!-- ​可滚动视图区域 scroll-view -->
+<view class="section">
+    <view class="section__title">vertical scroll</view>
+    <scroll-view scroll-y="true" style="height:200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" 
+        scroll-into-view="{{ toView }}" scroll-top="{{ scrollTop }}">
+        <view id="green" class="scroll-view-item bc_green"></view>
+        <view id="red" class="scroll-view-item bc_red"></view>
+        <view id="yellow" class="scroll-view-item bc_yellow"></view>
+        <view id="blue" class="scroll-view-item bc_blue"></view>
+    </scroll-view>
+
+    <view class="btn-area">
+        <button size="mini" bindtap="tap">click me to scroll into view</button>
+        <button size="mini" bindtap="tapMove">click me to scroll</button>
+    </view>
+</view>
+<view class="section section_gap">
+    <view class="section_title">horizontal scroll</view>
+    <scroll-view class="scroll-view_H" scroll-x="true" style="width:100%">
+        <view id="green" class="scroll-view-item_H bc_green"></view>
+        <view id="red" class="scroll-view-item_H bc_red"></view>
+        <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+        <view id="blue" class="scroll-view-item_H bc_blue"></view>
+    </scroll-view>
+</view>
+
+<!-- 滑动面板 swiper -->
+<swiper indicator-dots="{{ indicatorDots }}" autoplay="{{ autoplay }}" interval="{{ interval }}" duration="{{ duration }}">
+    <block wx:for-items="{{ imgUrls }}">
+        <swiper-item>
+            <image src="{{ item }}" calss="slide-image" width="600" height="300" />
+        </swiper-item>
+    </block>
+</swiper>
+
+<button bindtap="changeIndicationDots">indicator-dots</button>
+<button bindtap="changeAutoplay">autoplay</button>
+<slider bindchange="intervalChange" show-value min="500" max="2000" />interval
+<slider bindchange="durationChange" show-value min="1000" max="10000" />duration

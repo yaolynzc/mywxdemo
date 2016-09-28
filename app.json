@@ -3,7 +3,10 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/bind/bind",
-    "pages/event/event"
+    "pages/event/event",
+    "pages/view/view",
+    "pages/base/base",
+    "pages/form/form"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,0 +1,37 @@
+<!-- 基础内容icon -->
+<view class="group">
+    <block wx:for-items="{{ iconSize }}">
+        <icon type="success" size="{{ item }}"/>
+    </block>
+</view>
+
+<view class="group">
+    <scroll-view scroll-x>
+        <block wx:for-items="{{ iconType }}">
+            <icon type="{{ item }}" size="45"/>
+        </block>
+    </scroll-view>
+</view>
+
+<view class="group">
+    <block wx:for-items="{{ iconColor }}">
+        <icon type="success" size="45" color="{{ item }}"/>
+    </block>
+</view>
+
+<!-- 数据绑定 组合 -->
+<!--<view wx:for-items="{{ [zero,1,2,3,4] }}">{{ item }}</view>-->
+
+<!-- text 文本节点，支持转义符"\" -->
+<view class="section section_gap">
+    <text>{{ text }}</text>
+    <view class="btn-area">
+        <button bindtap="add">add line</button>
+        <button bindtap="remove">remove line</button>
+    </view>
+</view>
+
+<progress percent="20" show-info />
+<progress percent="40" stroke-width="12"/>
+<progress percent="60" color="pink" />
+<progress percent="80" active show-info />
