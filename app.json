@@ -6,7 +6,8 @@
     "pages/event/event",
     "pages/view/view",
     "pages/base/base",
-    "pages/form/form"
+    "pages/form/form",
+    "pages/sheet/sheet"
   ],
   "window":{
     "backgroundTextStyle":"light",

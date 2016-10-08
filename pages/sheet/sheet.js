@@ -1,0 +1,42 @@
+Page({
+  data:{
+    // text:"这是一个页面"
+    actionSheetHidden:true,
+    actionSheetItems:['item1','item2','item3','item4'],
+    modalHidden:true,
+    modalHidden2:true
+  },
+  modalTap:function(e){
+      this.setData({
+          modalHidden:false
+      })
+  },
+  modalChange:function(e){
+      this.setData({
+          modalHidden:true
+      })
+  },
+  modalTap2:function(e){
+      this.setData({
+          modalHidden2:false
+      })
+  },
+  modalChange2:function(e){
+      this.setData({
+          modalHidden2:true
+      })
+  },
+  actionSheetTap:function(e){
+      this.setData({
+          actionSheetHidden:!this.data.actionSheetHidden
+      })
+  },
+  actionSheetChange:function(e){
+      this.setData({
+          actionSheetHidden:!this.data.actionSheetHidden
+      })
+  },
+  bindItemTap:function(e){
+      console.log('tap ' + e.currentTarget.dataset.name)
+  }
+})

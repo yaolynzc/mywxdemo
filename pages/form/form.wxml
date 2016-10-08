@@ -93,7 +93,7 @@
     <input placeholder-style="color:red" placeholder="占位符字体是红色的" />
 </view>
 
-<!-- 滚动选择器 -->
+<!-- 滚动选择器 picker -->
 <view class="section">
     <view class="section_title">地区选择器</view>
     <picker bindchange="bindPickerChange" value="{{ index }}" range="{{ array }}">
@@ -117,4 +117,40 @@
             当前选择：{{ date }}
         </view>
     </picker>
+</view>
+
+<!-- 单项选择器 radio-group -->
+<radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{ items }}" >
+        <radio value="{{ item.namne }}" checked="{{ item.checked }}" />{{ item.value }}
+    </label>
+</radio-group>
+
+<!-- 滑动选择器 slider -->
+<view class="section section_gap">
+    <text class="section__title">设置left/right icon</text>
+    <view class="body-view">
+        <silder bindchange="sliderchange" left-icon="cancel" right-icon="success_no_circle" />
+    </view>
+</view>
+
+<view class="section section_gap">
+    <text class="section__title">设置step</text>
+    <view class="body-view">
+        <slider bindchange="slider2change" step="5" />
+    </view>
+</view>
+
+<view class="section section_gap">
+    <text class="section__title">显示当前value</text>
+    <view class="body-view">
+        <slider bindchange="slider3change" show-value />
+    </view>
+</view>
+
+<view class="section section_gap">
+    <text class="section__title">设置最小/最大值</text>
+    <view class="body-view">
+        <slider bindchange="slider4change" min="50" maxlength="200" show-value />
+    </view>
 </view>

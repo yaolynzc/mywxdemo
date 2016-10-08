@@ -22,8 +22,11 @@ var pageObject = {
         date:'2016-09-01',
         time:'12:01'
     },
+    radioChange:function(e){
+        console.log('radio发生了了change事件，携带value值为：',e.detail.value)
+    },
     bindPickerChange:function(e){
-        console.log('picker发送选择改变，携带值为',e.detail.value)
+        console.log('picker发送选择改变，携带值为：',e.detail.value)
         this.setData({
             index:e.detail.value
         })
@@ -106,6 +109,14 @@ for(var i=0;i<types.length;++i){
             this.setData(changeData)
         }
     })(types[i])
+}
+
+for(var i=1;i<5;i++){
+    (function(index){
+        pageObject['slider' + index + 'change'] = function(e){
+            console.log('slider' + 'index' + '发生change事件，携带值为：',e.detail.value) 
+        }
+    })(i)
 }
 
 Page(pageObject)
