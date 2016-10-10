@@ -10,12 +10,12 @@ Page({
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../sheet/sheet'
+      url: '../map/map'
     })
   },
   bindEventTap:function(){
     wx.navigateTo({
-      url:'../event/event'
+      url:'../media/media'
     })
   },
   onLoad: function () {

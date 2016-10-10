@@ -1,0 +1,38 @@
+<!-- 视频播放器 video -->
+<view class="section tc">
+    <video src="https://thinkjs.org/static/upload/thinkjs-create-project.mp4" binderror="videoErrorCallback"></video>
+</view>
+
+<view class="section tc">
+    <video src=" {{src}} "></video>
+    <view class="btn-area">
+        <button bindtap="bindButtonTap">获取视频</button>
+    </view>
+</view>
+
+<!-- 音频播放器 audio -->
+<audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="http://qqma.tingge123.com:823/mp3/2015-06-13/1434188181.mp3"
+    action="{{action}}" controls loop></audio>
+<button type="primary" bindtap="audioPlay">播放</button>
+<button type="primary" bindtap="audioPause">暂停</button>
+<button type="primary" bindtap="audioPlaybackRateSpeedUp">调为2倍速</button>
+<button type="primary" bindtap="audioPlaybackRateNormal">调为1倍速</button>
+<button type="primary" bindtap="audioPlaybackRateSlowDown">调为0.5倍速</button>
+<button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+<button type="primary" bindtap="audioStart">回到开头</button>
+
+<!-- 图片资源 image -->
+<view class="page">
+    <view class="page_hd">
+        <text class="page__title">image</text>
+        <text class="page__desc">图片</text>
+    </view>
+    <view class="page__bd">
+        <view class="section section_gap" wx:for-items="{{array}}" wx:for-item="item">
+            <view class="section__title">{{item.text}}</view>
+            <view class="section__ctn">
+                <image style="width:200px;height:200px;background-color:#eeeeee" mode="{{item.mode}}" src="{{srcp}}"></image>
+            </view>
+        </view>
+    </view>
+</view>

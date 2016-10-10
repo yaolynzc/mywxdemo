@@ -1,0 +1,8 @@
+<!-- 地图 map -->
+<map longitude="114.305938" latitude="114.305938" markers="{{markers}}" covers="{{covers}}" style="width:300px;height=200px;"></map>
+
+<!-- 画布 canvas -->
+<canvas style="width:300px;height:200px;" canvas-id="firstCanvas"></canvas>
+<canvas style="width:400px;height:500px;" canvas-id="secondCanvas"></canvas>
+<canvas style="width:300px;height:400px;" canvas-id="secondCanvas" binderror="canvasIdErrorCallback"></canvas>
+

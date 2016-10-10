@@ -7,7 +7,9 @@
     "pages/view/view",
     "pages/base/base",
     "pages/form/form",
-    "pages/sheet/sheet"
+    "pages/sheet/sheet",
+    "pages/media/media",
+    "pages/map/map"
   ],
   "window":{
     "backgroundTextStyle":"light",
